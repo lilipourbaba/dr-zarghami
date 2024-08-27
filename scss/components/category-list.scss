@@ -1,0 +1,38 @@
+.cat-list-mobile {
+  display: none;
+  border-radius: 1rem;
+  border: 1px solid var(--gray-2, #e6eaed);
+  background: var(--blue-4, rgba(15, 123, 156, 0.04));
+  backdrop-filter: blur(12px);
+  padding: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  @media (width <= 1260px) {
+    display: flex;
+    margin-block-end: 0.5rem;
+  }
+
+  select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border: none;
+    background: #f6fafb;
+    option {
+      color: $gray_1;
+      font-size: 1rem;
+
+      &:checked {
+        border: none;
+        outline: none;
+      }
+
+      span {
+        color: $blue_1;
+      }
+    }
+  }
+}
